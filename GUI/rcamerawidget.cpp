@@ -21,7 +21,7 @@ RCameraWidget::RCameraWidget(RCamera *cam, QWidget *parent) :
 void RCameraWidget::paintEvent(QPaintEvent *)
 {
     QPainter painter( this );
-    painter.drawImage( rect(), image);
+    painter.drawImage( image.rect(), image);
 }
 
 RCamera* RCameraWidget::getCamera() const

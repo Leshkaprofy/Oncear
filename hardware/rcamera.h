@@ -19,12 +19,9 @@ public:
     RCamera(ComId &comId, QObject *parent = 0);
     ~RCamera();
 
-    bool isStreaming() const;
-    void setResolution(unsigned int width, unsigned int height);
-    void resolution(unsigned int *width, unsigned int *height) const;
-
 signals:
     void imageReceived(QImage iamge);
+    void setStream(bool streaming);
 
 public slots:
     void setStreaming(bool streaming);
@@ -32,13 +29,7 @@ public slots:
 protected:
     void run();
 
-    QMutex mutex;
-    QWaitCondition condition;
-
-    bool streaming;
-    bool resized;
     ComId comId;
-    unsigned int width, height;
 };
 
 #endif // RCAMERA_H

@@ -16,6 +16,7 @@ class hardware::device::RCameraDevice : public QObject, public Camera
     Q_OBJECT
 public:
     RCameraDevice(ComId &comId);
+    ~RCameraDevice();
 
     virtual void imageReceivedEvent( const unsigned char* data,unsigned int dataSize,
                                      unsigned int width,unsigned int height,unsigned int numChannels,
@@ -23,6 +24,8 @@ public:
 signals:
     void imageReceived(QImage image);
 
+public slots:
+    void setStream(bool streaming);
 };
 
 #endif // RCAMERADEVICE_H
