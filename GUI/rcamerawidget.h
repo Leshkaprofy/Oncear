@@ -19,7 +19,7 @@ public:
     RCamera* getCamera() const;
     void setCamera(RCamera *cam);
 
-signals: 
+signals:
 
 public slots:
     void imageReived(QImage image);

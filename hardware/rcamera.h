@@ -22,6 +22,7 @@ public:
 signals:
     void imageReceived(QImage iamge);
     void setStream(bool streaming);
+    void sendMessage(const QString &message);
 
 public slots:
     void setStreaming(bool streaming);

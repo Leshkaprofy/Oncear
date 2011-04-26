@@ -28,7 +28,8 @@ SOURCES += \
     hardware/rcom.cpp \
     hardware/devices/rcameradevice.cpp \
     hardware/rcamera.cpp \
-    GUI/rcamerawidget.cpp
+    GUI/rcamerawidget.cpp \
+    GUI/rlogwidget.cpp
 
 
 HEADERS += \
@@ -36,4 +37,5 @@ HEADERS += \
     hardware/devices/rcameradevice.h \
     namespaces.h \
     hardware/rcamera.h \
-    GUI/rcamerawidget.h
+    GUI/rcamerawidget.h \
+    GUI/rlogwidget.h
